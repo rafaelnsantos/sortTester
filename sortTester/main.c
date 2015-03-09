@@ -27,9 +27,12 @@ int main(int argc, char** argv) {
     //FILE *invertidos = fopen ("invertidos.txt", "w");
     //FILE *aleatorios = fopen ("aleatorios.txt", "w");
     
+    int op;
     int tam;
     int i;
+    
     printf("Tamanho(170000 max): ");
+    
     scanf("%d",&tam);
     
     long ordenados[tam], aleatorios[tam], invertidos[tam];
@@ -41,7 +44,34 @@ int main(int argc, char** argv) {
         invertidos[i] = tam - i;
         aleatorios[i] = rand()%tam+1;
     }
-    //mostraV(aleatorios, tam);
+    
+    do{
+        printf("1 - Bubble Sort\n");
+        printf("2 - Insertion Sort\n");
+        printf("0 - Sair\n");
+        printf("Escolha: ");
+        scanf("%d",&op);
+        switch(op){
+            case 1:
+                printf("\n===BUBBLE SORT===\n");
+                printf("Ordenados: %f segundos\n", bubbleSort(ordenados, tam));
+                printf("Invertidos: %f segundos\n", bubbleSort(invertidos, tam));
+                printf("Aleatorios: %f segundos\n", bubbleSort(aleatorios, tam));
+                break;
+            
+            case 2:
+                printf("\n===INSERTION SORT===\n");
+                printf("Ordenados: %f segundos\n", insertionSort(ordenados, tam));
+                printf("Invertidos: %f segundos\n", insertionSort(invertidos, tam));
+                printf("Aleatorios: %f segundos\n", insertionSort(aleatorios, tam));
+                break;
+                
+            default:
+                printf("Opcao Invalida");
+                break;
+        }
+        printf("\n");
+    }while(op != 0);
     return (EXIT_SUCCESS);
 }
 
