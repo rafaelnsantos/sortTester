@@ -12,8 +12,9 @@
 extern "C" {
 #endif
 
-
-double bubbleSort(int *array, int length)
+#include "vetores.h"
+    
+float bubbleSort(int *array, int length)
  {
      clock_t inicio = clock();
      
@@ -31,7 +32,7 @@ double bubbleSort(int *array, int length)
  	    }
  	}
      }
-     return (double)(clock() - inicio) / CLOCKS_PER_SEC;
+     return (float)(clock() - inicio) / CLOCKS_PER_SEC;
  }
 
 #ifdef	__cplusplus

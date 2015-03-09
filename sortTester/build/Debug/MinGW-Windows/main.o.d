@@ -1,8 +1,8 @@
-build/Debug/MinGW-Windows/main.o: main.c bubbleSort.h insertionSort.h \
- vetores.h
+build/Debug/MinGW-Windows/main.o: main.c bubbleSort.h vetores.h \
+ insertionSort.h
 
 bubbleSort.h:
 
-insertionSort.h:
-
 vetores.h:
+
+insertionSort.h:
