@@ -8,18 +8,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> 
+#include <ctype.h>
 #include "bubbleSort.h"
 #include "insertionSort.h"
+#include "vetores.h"
 /*
  * 
  */
 
-void mostraV(long *vetor, int tam){
-    int y;
-    for(y=0;y<tam;y++){
-        printf("%d ", vetor[y]);
-    }
-}
+
 
 
 int main(int argc, char** argv) {
@@ -29,23 +26,18 @@ int main(int argc, char** argv) {
     
     int op;
     int tam;
-    int i;
     
-    printf("Tamanho(170000 max): ");
-    
-    scanf("%d",&tam);
-    
-    long ordenados[tam], aleatorios[tam], invertidos[tam];
-    
-    srand(time(NULL));
-    
-    for(i = 0; i < tam; i++){
-        ordenados[i] = i + 1;
-        invertidos[i] = tam - i;
-        aleatorios[i] = rand()%tam+1;
-    }
     
     do{
+        printf("Tamanho: ");
+        scanf("%d",&tam); ;
+
+    //mostraV(vetor,tam);
+    
+    //mostraV(aleatorios(tam),tam);
+   // mostraV(invertidos(tam),tam);
+    
+
         printf("1 - Bubble Sort\n");
         printf("2 - Insertion Sort\n");
         printf("0 - Sair\n");
@@ -54,16 +46,16 @@ int main(int argc, char** argv) {
         switch(op){
             case 1:
                 printf("\n===BUBBLE SORT===\n");
-                printf("Ordenados: %f segundos\n", bubbleSort(ordenados, tam));
-                printf("Invertidos: %f segundos\n", bubbleSort(invertidos, tam));
-                printf("Aleatorios: %f segundos\n", bubbleSort(aleatorios, tam));
+                printf("Ordenados: %f segundos\n", bubbleSort(ordenados(tam), tam));
+                printf("Invertidos: %f segundos\n", bubbleSort(invertidos(tam), tam));
+                printf("Aleatorios: %f segundos\n", bubbleSort(aleatorios(tam), tam));
                 break;
             
             case 2:
                 printf("\n===INSERTION SORT===\n");
-                printf("Ordenados: %f segundos\n", insertionSort(ordenados, tam));
-                printf("Invertidos: %f segundos\n", insertionSort(invertidos, tam));
-                printf("Aleatorios: %f segundos\n", insertionSort(aleatorios, tam));
+                printf("Ordenados: %f segundos\n", insertionSort(ordenados(tam), tam));
+                printf("Invertidos: %f segundos\n", insertionSort(invertidos(tam), tam));
+                printf("Aleatorios: %f segundos\n", insertionSort(aleatorios(tam), tam));
                 break;
                 
             default:

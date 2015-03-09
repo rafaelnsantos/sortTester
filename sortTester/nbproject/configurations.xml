@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>bubbleSort.h</itemPath>
       <itemPath>insertionSort.h</itemPath>
+      <itemPath>vetores.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -44,6 +45,8 @@
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="vetores.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -70,6 +73,8 @@
       <item path="insertionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
