@@ -35,6 +35,13 @@ float bubbleSort(int *array, int length)
      return (float)(clock() - inicio) / CLOCKS_PER_SEC;
  }
 
+void testarBubble(int tam){
+    printf("\n===BUBBLE SORT===\n");
+    printf("Ordenados: %f segundos\n", bubbleSort(ordenados(tam), tam));
+    printf("Invertidos: %f segundos\n", bubbleSort(invertidos(tam), tam));
+    printf("Aleatorios: %f segundos\n", bubbleSort(aleatorios(tam), tam));
+}
+
 #ifdef	__cplusplus
 }
 #endif

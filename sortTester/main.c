@@ -1,7 +1,7 @@
 /* 
  * File:   main.c
  * Author: Verde
- *
+ * http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting
  * Created on March 9, 2015, 3:21 PM
  */
 
@@ -46,17 +46,11 @@ int main(int argc, char** argv) {
         scanf("%d",&op);
         switch(op){
             case 1:
-                printf("\n===BUBBLE SORT===\n");
-                printf("Ordenados: %f segundos\n", bubbleSort(ordenados(tam), tam));
-                printf("Invertidos: %f segundos\n", bubbleSort(invertidos(tam), tam));
-                printf("Aleatorios: %f segundos\n", bubbleSort(aleatorios(tam), tam));
+                testarBubble(tam);
                 break;
             
             case 2:
-                printf("\n===INSERTION SORT===\n");
-                printf("Ordenados: %f segundos\n", insertionSort(ordenados(tam), tam));
-                printf("Invertidos: %f segundos\n", insertionSort(invertidos(tam), tam));
-                printf("Aleatorios: %f segundos\n", insertionSort(aleatorios(tam), tam));
+                testarInsertion(tam);
                 break;
                 
             default:
