@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   main.c
  * Author: Verde
  * http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting
@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h> 
+#include <time.h>
 #include <ctype.h>
 #include "bubbleSort.h"
 #include "insertionSort.h"
@@ -17,31 +17,20 @@
 #include "quickSort.h"
 
 /*
- * 
+ *
  */
 
-
-
-
 int main(int argc, char** argv) {
-    //FILE *ordenados = fopen ("ordenados.txt", "w");
-    //FILE *invertidos = fopen ("invertidos.txt", "w");
-    //FILE *aleatorios = fopen ("aleatorios.txt", "w");
-    
+
     int op;
     int tam;
-    
-    
+
+
+
     do{
         printf("Tamanho: ");
-        scanf("%d",&tam); ;
-
-    //mostraV(vetor,tam);
-    
-    //mostraV(aleatorios(tam),tam);
-   // mostraV(invertidos(tam),tam);
-    
-
+        scanf("%d",&tam);
+        //vetor = (int *) malloc (tam*sizeof(int));
         printf("1 - Bubble Sort\n");
         printf("2 - Insertion Sort\n");
         printf("3 - Selection Sort\n");
@@ -55,27 +44,27 @@ int main(int argc, char** argv) {
             case 1:
                 testarBubble(tam);
                 break;
-            
+
             case 2:
                 testarInsertion(tam);
                 break;
-                
+
             case 3:
                 testarSelection(tam);
                 break;
-                
+
             case 4:
                 testarShell(tam);
                 break;
-                
+
             case 5:
                 testarMerge(tam);
                 break;
-                
+
             case 6:
                 testarQuick(tam);
                 break;
-                
+
             default:
                 printf("Opcao Invalida");
                 break;

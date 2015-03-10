@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   quickSort.h
  * Author: Verde
  *
@@ -12,8 +12,8 @@
 extern "C" {
 #endif
 #include "vetores.h"
-    
-double quickSort (int *a, int n) {
+
+void quickS (int *a, int n) {
     clock_t inicio = clock();
     int i, j, p, t;
     if (n < 2)
@@ -30,13 +30,16 @@ double quickSort (int *a, int n) {
         a[i] = a[j];
         a[j] = t;
     }
-    quickSort(a, i);
-    quickSort(a + i, n - i);
+    quickS(a, i);
+    quickS(a + i, n - i);
     return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 
-
-
+double quickSort(int *a, int n) {
+    clock_t inicio = clock();
+    quickS(a, n);
+    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
+}
 void testarQuick(int tam) {
         printf("\n===QUICK SORT===\n");
         printf("Ordenados: %f segundos\n", quickSort(ordenados(tam), tam));

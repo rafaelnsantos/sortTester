@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   vetores.h
  * Author: Verde
  *
@@ -12,41 +12,53 @@
 extern "C" {
 #endif
 
+//int *vetor;
 
 int * ordenados(int tam){
-    int vetor[tam];
+    int *vetor;
+    vetor = (int *) malloc (tam*sizeof(int));
     int i;
     for(i = 0; i < tam; i++){
         vetor[i] = i + 1;
         //printf("vetor[%d] = %d\n", i, vetor[i]);
     }
+    imprimir(vetor, tam, "ordenados.txt");
+    //free(vetor);
     return vetor;
 }
 
 int * invertidos(int tam){
-    int vetor[tam];
+    int *vetor;
+    vetor = (int *) malloc (tam*sizeof(int));
     int i;
     for(i = 0; i < tam; i++){
         vetor[i] = tam - i;
     }
+    imprimir(vetor, tam, "invertidos.txt");
+    //free(vetor);
     return vetor;
 }
 
 int * aleatorios(int tam){
-    srand(time(NULL));
-    int vetor[tam];
+    int *vetor;
+    vetor = (int *) malloc (tam*sizeof(int));
     int i;
+    srand(time(NULL));
     for(i = 0; i < tam; i++){
         vetor[i] = rand()%tam+1;
     }
+    imprimir(vetor, tam, "aleatorios.txt");
+    //free(vetor);
     return vetor;
 }
 
-void mostraV(int *vetor, int tam){
+void imprimir(int *vetor, int tam, char *nome){
+    FILE * pFile;
     int i;
-    for(i = 0; i < tam; i++){
-        printf("vetor[%d] = %d\n", i, vetor[i]);
-    }
+    pFile = fopen (nome,"w");
+    for(i = 0; i < tam; i++)
+        fprintf(pFile, "%d\n",vetor[i]);
+    fclose(pFile);
 }
 
 #ifdef	__cplusplus
