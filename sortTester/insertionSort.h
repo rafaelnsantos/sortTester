@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   insertionSort.h
  * Author: Verde
  *
@@ -25,6 +25,7 @@ extern "C" {
             }
             a[j + 1] = value;
         }
+        free(a);
         return (double) (clock() - inicio) / CLOCKS_PER_SEC;
     }
 

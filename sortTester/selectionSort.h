@@ -33,6 +33,7 @@ double selectionSort(int *array, int length)
         length--;
     }
     //imprimir(array, tam, "asd.txt");
+    free(array);
     return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 

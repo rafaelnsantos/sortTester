@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
         printf("Tamanho: ");
         scanf("%d",&tam);
         //vetor = (int *) malloc (tam*sizeof(int));
-        printf("1 - Bubble Sort\n");
+        printf("\n1 - Bubble Sort\n");
         printf("2 - Insertion Sort\n");
         printf("3 - Selection Sort\n");
         printf("4 - Shell Sort\n");

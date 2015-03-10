@@ -32,12 +32,12 @@ void quickS (int *a, int n) {
     }
     quickS(a, i);
     quickS(a + i, n - i);
-    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 
 double quickSort(int *a, int n) {
     clock_t inicio = clock();
     quickS(a, n);
+    free(a);
     return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 void testarQuick(int tam) {

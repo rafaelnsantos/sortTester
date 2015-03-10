@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   shellSort.h
  * Author: Verde
  *
@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
 #include "vetores.h"
-    
+
 // double shellSort(int *vet, int size) {
 //    clock_t inicio = clock();
 //     int i , j , value;
@@ -35,7 +35,7 @@ extern "C" {
 //    }
 //    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 //}
- 
+
  double shellSort (int *a, int n) {
     clock_t inicio = clock();
     int h, i, j, t;
@@ -48,6 +48,7 @@ extern "C" {
             a[j] = t;
         }
     }
+    free(a);
     return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 }
  void testarShell(int tam) {
