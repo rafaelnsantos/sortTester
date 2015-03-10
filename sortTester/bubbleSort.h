@@ -28,12 +28,12 @@ void bubbleSort(int *array, int length)
  	    }
  	}
      }
-     free(array);
  }
 
 float bubbleSortTime(int *array, int length){
     clock_t inicio = clock();
     bubbleSort(array, length);
+    free(array);
     return (float)(clock() - inicio) / CLOCKS_PER_SEC;
 }
 
