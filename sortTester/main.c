@@ -35,8 +35,7 @@ int main(int argc, char** argv) {
         printf("4 - Shell Sort\n");
         printf("5 - Merge Sort\n");
         printf("6 - Quick Sort\n");
-        printf("0 - Sair\n");
-        printf("Escolha: ");
+        printf("\nEscolha: ");
         scanf("%d",&op);
         switch(op){
             case 1:
@@ -68,7 +67,7 @@ int main(int argc, char** argv) {
                 break;
         }
         printf("\n");
-    }while(op != 0);
+    }while(1);
     return (EXIT_SUCCESS);
 }
 
