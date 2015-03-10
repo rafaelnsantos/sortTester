@@ -22,7 +22,7 @@ int * ordenados(int tam){
         vetor[i] = i + 1;
         //printf("vetor[%d] = %d\n", i, vetor[i]);
     }
-    imprimir(vetor, tam, "ordenados.txt");
+    //imprimir(vetor, tam, "ordenados.txt");
     //free(vetor);
     return vetor;
 }
@@ -34,7 +34,7 @@ int * invertidos(int tam){
     for(i = 0; i < tam; i++){
         vetor[i] = tam - i;
     }
-    imprimir(vetor, tam, "invertidos.txt");
+    //imprimir(vetor, tam, "invertidos.txt");
     //free(vetor);
     return vetor;
 }
@@ -47,7 +47,7 @@ int * aleatorios(int tam){
     for(i = 0; i < tam; i++){
         vetor[i] = rand()%tam+1;
     }
-    imprimir(vetor, tam, "aleatorios.txt");
+    //imprimir(vetor, tam, "aleatorios.txt");
     //free(vetor);
     return vetor;
 }

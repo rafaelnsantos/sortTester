@@ -25,8 +25,6 @@ int main(int argc, char** argv) {
     int op;
     int tam;
 
-
-
     do{
         printf("Tamanho: ");
         scanf("%d",&tam);

@@ -37,11 +37,11 @@ double selectionSort(int *array, int length)
 }
 
     void testarSelection(int tam) {
-        int *vetor;
-        vetor = (int *) malloc (tam*sizeof(int));
-        vetor = invertidos(tam);
-        selectionSort(vetor, tam);
-        imprimir(vetor,tam,"vetor ordenado.txt");
+        //int *vetor;
+        //vetor = (int *) malloc (tam*sizeof(int));
+        //vetor = invertidos(tam);
+        //selectionSort(vetor, tam);
+        //imprimir(vetor,tam,"vetor ordenado.txt");
         printf("\n===SELECTION SORT===\n");
         printf("Ordenados: %f segundos\n", selectionSort(ordenados(tam), tam));
         printf("Invertidos: %f segundos\n", selectionSort(invertidos(tam), tam));
