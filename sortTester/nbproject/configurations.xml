@@ -6,6 +6,10 @@
                    projectFiles="true">
       <itemPath>bubbleSort.h</itemPath>
       <itemPath>insertionSort.h</itemPath>
+      <itemPath>mergeSort.h</itemPath>
+      <itemPath>quickSort.h</itemPath>
+      <itemPath>selectionSort.h</itemPath>
+      <itemPath>shellSort.h</itemPath>
       <itemPath>vetores.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -45,6 +49,14 @@
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="mergeSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quickSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="shellSort.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
@@ -73,6 +85,14 @@
       <item path="insertionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="mergeSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quickSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="shellSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>

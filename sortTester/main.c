@@ -11,7 +11,10 @@
 #include <ctype.h>
 #include "bubbleSort.h"
 #include "insertionSort.h"
-#include "vetores.h"
+#include "selectionSort.h"
+#include "shellSort.h"
+#include "mergeSort.h"
+#include "quickSort.h"
 
 /*
  * 
@@ -41,6 +44,10 @@ int main(int argc, char** argv) {
 
         printf("1 - Bubble Sort\n");
         printf("2 - Insertion Sort\n");
+        printf("3 - Selection Sort\n");
+        printf("4 - Shell Sort\n");
+        printf("5 - Merge Sort\n");
+        printf("6 - Quick Sort\n");
         printf("0 - Sair\n");
         printf("Escolha: ");
         scanf("%d",&op);
@@ -51,6 +58,22 @@ int main(int argc, char** argv) {
             
             case 2:
                 testarInsertion(tam);
+                break;
+                
+            case 3:
+                testarSelection(tam);
+                break;
+                
+            case 4:
+                testarShell(tam);
+                break;
+                
+            case 5:
+                testarMerge(tam);
+                break;
+                
+            case 6:
+                testarQuick(tam);
                 break;
                 
             default:

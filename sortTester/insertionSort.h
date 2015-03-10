@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+#include "vetores.h"
+
     double insertionSort(int *a, int length) {
         clock_t inicio = clock();
 
