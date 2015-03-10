@@ -36,8 +36,7 @@ extern "C" {
 //    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
 //}
 
- double shellSort (int *a, int n) {
-    clock_t inicio = clock();
+ void shellSort (int *a, int n) {
     int h, i, j, t;
     for (h = n; h /= 2;) {
         for (i = h; i < n; i++) {
@@ -48,14 +47,19 @@ extern "C" {
             a[j] = t;
         }
     }
+}
+ 
+ float shellSortTime (int *a, int n) {
+    clock_t inicio = clock();
+    shellSort(a, n);
     free(a);
     return (double) (clock() - inicio) / CLOCKS_PER_SEC;
-}
+ }
  void testarShell(int tam) {
         printf("\n===SHELL SORT===\n");
-        printf("Ordenados: %f segundos\n", shellSort(ordenados(tam), tam));
-        printf("Invertidos: %f segundos\n", shellSort(invertidos(tam), tam));
-        printf("Aleatorios: %f segundos\n", shellSort(aleatorios(tam), tam));
+        printf("Ordenados: %f segundos\n", shellSortTime(ordenados(tam), tam));
+        printf("Invertidos: %f segundos\n", shellSortTime(invertidos(tam), tam));
+        printf("Aleatorios: %f segundos\n", shellSortTime(aleatorios(tam), tam));
     }
 
 #ifdef	__cplusplus

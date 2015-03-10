@@ -14,10 +14,8 @@ extern "C" {
 
 #include "vetores.h"
 
-float bubbleSort(int *array, int length)
+void bubbleSort(int *array, int length)
  {
-     clock_t inicio = clock();
-
      int i, j, tmp;
      for (i = 0; i < length - 1; ++i) {
  	for (j = 0; j < length - i - 1; ++j)
@@ -31,14 +29,19 @@ float bubbleSort(int *array, int length)
  	}
      }
      free(array);
-     return (float)(clock() - inicio) / CLOCKS_PER_SEC;
  }
+
+float bubbleSortTime(int *array, int length){
+    clock_t inicio = clock();
+    bubbleSort(array, length);
+    return (float)(clock() - inicio) / CLOCKS_PER_SEC;
+}
 
 void testarBubble(int tam){
     printf("\n===BUBBLE SORT===\n");
-    printf("Ordenados: %f segundos\n", bubbleSort(ordenados(tam), tam));
-    printf("Invertidos: %f segundos\n", bubbleSort(invertidos(tam), tam));
-    printf("Aleatorios: %f segundos\n", bubbleSort(aleatorios(tam), tam));
+    printf("Ordenados: %f segundos\n", bubbleSortTime(ordenados(tam), tam));
+    printf("Invertidos: %f segundos\n", bubbleSortTime(invertidos(tam), tam));
+    printf("Aleatorios: %f segundos\n", bubbleSortTime(aleatorios(tam), tam));
 }
 
 #ifdef	__cplusplus

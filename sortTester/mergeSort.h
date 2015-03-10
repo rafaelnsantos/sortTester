@@ -73,12 +73,12 @@ void mergeSort( int *vetorDesorndeado, int posicaoInicio, int posicaoFim )
    free(vetorTemp);
 }
 
-double tempoMerge (int *a, int n) {
+float mergeSortTime (int *a, int n) {
     clock_t inicio = clock();
     mergeSort(a, 0, n);
     free(a);
     //imprimir(a, n, "asd.txt");
-    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
+    return (float) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 
 void testarMerge(int tam) {
@@ -88,9 +88,9 @@ void testarMerge(int tam) {
         //mergeSort(vetor, 0,tam);
         //imprimir(vetor,tam,"vetor ordenado merge.txt");
         printf("\n===MERGE SORT===\n");
-        printf("Ordenados: %f segundos\n", tempoMerge(ordenados(tam), tam));
-        printf("Invertidos: %f segundos\n", tempoMerge(invertidos(tam), tam));
-        printf("Aleatorios: %f segundos\n", tempoMerge(aleatorios(tam), tam));
+        printf("Ordenados: %f segundos\n", mergeSortTime(ordenados(tam), tam));
+        printf("Invertidos: %f segundos\n", mergeSortTime(invertidos(tam), tam));
+        printf("Aleatorios: %f segundos\n", mergeSortTime(aleatorios(tam), tam));
     }
 
 

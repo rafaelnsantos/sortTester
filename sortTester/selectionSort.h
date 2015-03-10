@@ -14,9 +14,8 @@ extern "C" {
 
 #include "vetores.h"
 
-double selectionSort(int *array, int length)
+void selectionSort(int *array, int length)
 {
-    clock_t inicio = clock();
     int max, i, temp;
     int tam = length;
     //imprimir(array, tam, "asdd.txt");
@@ -33,8 +32,13 @@ double selectionSort(int *array, int length)
         length--;
     }
     //imprimir(array, tam, "asd.txt");
+}
+
+float selectionSortTime(int *array, int length){
+    clock_t inicio = clock();
+    selectionSort(array, length);
     free(array);
-    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
+    return (float) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 
     void testarSelection(int tam) {
@@ -44,9 +48,9 @@ double selectionSort(int *array, int length)
         //selectionSort(vetor, tam);
         //imprimir(vetor,tam,"vetor ordenado.txt");
         printf("\n===SELECTION SORT===\n");
-        printf("Ordenados: %f segundos\n", selectionSort(ordenados(tam), tam));
-        printf("Invertidos: %f segundos\n", selectionSort(invertidos(tam), tam));
-        printf("Aleatorios: %f segundos\n", selectionSort(aleatorios(tam), tam));
+        printf("Ordenados: %f segundos\n", selectionSortTime(ordenados(tam), tam));
+        printf("Invertidos: %f segundos\n", selectionSortTime(invertidos(tam), tam));
+        printf("Aleatorios: %f segundos\n", selectionSortTime(aleatorios(tam), tam));
     }
 
 #ifdef	__cplusplus

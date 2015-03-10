@@ -14,9 +14,7 @@ extern "C" {
 
 #include "vetores.h"
 
-    double insertionSort(int *a, int length) {
-        clock_t inicio = clock();
-
+    void insertionSort(int *a, int length) {
         int i, j, value;
         for (i = 1; i < length; i++) {
             value = a[i];
@@ -25,15 +23,19 @@ extern "C" {
             }
             a[j + 1] = value;
         }
-        free(a);
-        return (double) (clock() - inicio) / CLOCKS_PER_SEC;
     }
-
+    
+    float insertionSortTime(int *a, int length) {
+        clock_t inicio = clock();
+        insertionSort(a, length);
+        free(a);
+        return (float) (clock() - inicio) / CLOCKS_PER_SEC;
+    }
     void testarInsertion(int tam) {
         printf("\n===INSERTION SORT===\n");
-        printf("Ordenados: %f segundos\n", insertionSort(ordenados(tam), tam));
-        printf("Invertidos: %f segundos\n", insertionSort(invertidos(tam), tam));
-        printf("Aleatorios: %f segundos\n", insertionSort(aleatorios(tam), tam));
+        printf("Ordenados: %f segundos\n", insertionSortTime(ordenados(tam), tam));
+        printf("Invertidos: %f segundos\n", insertionSortTime(invertidos(tam), tam));
+        printf("Aleatorios: %f segundos\n", insertionSortTime(aleatorios(tam), tam));
     }
 
 

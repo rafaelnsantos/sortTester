@@ -13,7 +13,7 @@ extern "C" {
 #endif
 #include "vetores.h"
 
-void quickS (int *a, int n) {
+void quickSort (int *a, int n) {
     clock_t inicio = clock();
     int i, j, p, t;
     if (n < 2)
@@ -30,21 +30,21 @@ void quickS (int *a, int n) {
         a[i] = a[j];
         a[j] = t;
     }
-    quickS(a, i);
-    quickS(a + i, n - i);
+    quickSort(a, i);
+    quickSort(a + i, n - i);
 }
 
-double quickSort(int *a, int n) {
+float quickSortTime(int *a, int n) {
     clock_t inicio = clock();
-    quickS(a, n);
+    quickSort(a, n);
     free(a);
-    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
+    return (float) (clock() - inicio) / CLOCKS_PER_SEC;
 }
 void testarQuick(int tam) {
         printf("\n===QUICK SORT===\n");
-        printf("Ordenados: %f segundos\n", quickSort(ordenados(tam), tam));
-        printf("Invertidos: %f segundos\n", quickSort(invertidos(tam), tam));
-        printf("Aleatorios: %f segundos\n", quickSort(aleatorios(tam), tam));
+        printf("Ordenados: %f segundos\n", quickSortTime(ordenados(tam), tam));
+        printf("Invertidos: %f segundos\n", quickSortTime(invertidos(tam), tam));
+        printf("Aleatorios: %f segundos\n", quickSortTime(aleatorios(tam), tam));
     }
 
 
