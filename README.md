@@ -1,8 +1,8 @@
 # sortTester
 
-Bubble e Insertion: http://1drv.ms/1Mmp5ui
+Bubble e Insertion: http://1drv.ms/1ASJIIh
 
-Selection e Shell: http://1drv.ms/1AcXXrY
+Selection e Shell: http://1drv.ms/1HX3QhX
 
 Merge e Quick: http://1drv.ms/1AA5KAe
 
