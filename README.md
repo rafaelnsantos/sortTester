@@ -1,6 +1,6 @@
 # sortTester
 
-Bubble e Insertion: http://1drv.ms/1ASJIIh
+Bubble e Insertion: http://1drv.ms/1HX4I6v
 
 Selection e Shell: http://1drv.ms/1HX3QhX
 
