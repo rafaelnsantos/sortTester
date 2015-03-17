@@ -14,11 +14,8 @@ extern "C" {
 
 #include "vetores.h"
 
-void selectionSort(int *array, int length)
-{
+void selectionSort(int *array, int length){
     int max, i, temp;
-    int tam = length;
-    //imprimir(array, tam, "asdd.txt");
     while (length > 0)
     {
         max = 0;
@@ -31,7 +28,6 @@ void selectionSort(int *array, int length)
         array[max] = temp;
         length--;
     }
-    //imprimir(array, tam, "asd.txt");
 }
 
 float selectionSortTime(int *array, int length){

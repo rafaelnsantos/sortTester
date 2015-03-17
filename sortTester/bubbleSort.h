@@ -38,6 +38,26 @@ float bubbleSortTime(int *array, int length){
 }
 
 void testarBubble(int tam){
+//    int *vetor;
+//    vetor = (int *) malloc (tam * sizeof(int));
+//    
+//    vetor = invertidos(tam);
+//    imprimir(vetor, tam, "vetor invertido.txt");
+//    bubbleSort(vetor, tam);
+//    imprimir(vetor, tam, "vetor invertido ordenado com bubble.txt");
+//    
+//    vetor = ordenados(tam);
+//    imprimir(vetor, tam, "vetor ordenado.txt");
+//    bubbleSort(vetor, tam);
+//    imprimir(vetor, tam, "vetor ordenado ordenado com bubble.txt");
+//    
+//    vetor = aleatorios(tam);
+//    imprimir(vetor, tam, "vetor aleatorio.txt");
+//    bubbleSort(vetor, tam);
+//    imprimir(vetor, tam, "vetor aleatorio ordenado com bubble.txt");
+//    
+//    free(vetor);
+//    
     printf("\n===BUBBLE SORT===\n");
     printf("Ordenados: %f segundos\n", bubbleSortTime(ordenados(tam), tam));
     printf("Invertidos: %f segundos\n", bubbleSortTime(invertidos(tam), tam));

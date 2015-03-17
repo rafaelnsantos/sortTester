@@ -14,7 +14,6 @@ extern "C" {
 #include "vetores.h"
 
 void quickSort (int *a, int n) {
-    clock_t inicio = clock();
     int i, j, p, t;
     if (n < 2)
         return 0;
