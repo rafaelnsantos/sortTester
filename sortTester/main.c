@@ -15,6 +15,8 @@
 #include "shellSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
+#include "heapSort.h"
+#include "radixSort.h"
 
 /*
  *
@@ -35,6 +37,8 @@ int main(int argc, char** argv) {
         printf("4 - Shell Sort\n");
         printf("5 - Merge Sort\n");
         printf("6 - Quick Sort\n");
+        printf("7 - Heap Sort\n");
+        printf("8 - Radix Sort\n");
         printf("\nEscolha: ");
         scanf("%d",&op);
         switch(op){
@@ -61,6 +65,14 @@ int main(int argc, char** argv) {
             case 6:
                 testarQuick(tam);
                 break;
+            
+            case 7:
+                testarHeap(tam);
+                break;
+            
+            case 8:
+                testarRadix(tam);
+                break;    
 
             default:
                 printf("Opcao Invalida");

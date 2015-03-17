@@ -5,9 +5,11 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>bubbleSort.h</itemPath>
+      <itemPath>heapSort.h</itemPath>
       <itemPath>insertionSort.h</itemPath>
       <itemPath>mergeSort.h</itemPath>
       <itemPath>quickSort.h</itemPath>
+      <itemPath>radixSort.h</itemPath>
       <itemPath>selectionSort.h</itemPath>
       <itemPath>shellSort.h</itemPath>
       <itemPath>vetores.h</itemPath>
@@ -45,6 +47,8 @@
       </compileType>
       <item path="bubbleSort.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="heapSort.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="insertionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
@@ -52,6 +56,8 @@
       <item path="mergeSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="quickSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="radixSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -82,6 +88,8 @@
       </compileType>
       <item path="bubbleSort.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="heapSort.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="insertionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
@@ -89,6 +97,8 @@
       <item path="mergeSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="quickSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="radixSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
       </item>
