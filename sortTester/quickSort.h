@@ -34,10 +34,12 @@ void quickSort (int *a, int n) {
 }
 
 float quickSortTime(int *a, int n) {
+    float t;
     clock_t inicio = clock();
     quickSort(a, n);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(a);
-    return (float) (clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
 }
 void testarQuick(int tam) {
         printf("\n===QUICK SORT===\n");

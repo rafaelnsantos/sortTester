@@ -26,10 +26,12 @@ extern "C" {
     }
     
     float insertionSortTime(int *a, int length) {
+        float t;
         clock_t inicio = clock();
         insertionSort(a, length);
+        t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
         free(a);
-        return (float) (clock() - inicio) / CLOCKS_PER_SEC;
+        return t;
     }
     
     void testarInsertion(int tam) {

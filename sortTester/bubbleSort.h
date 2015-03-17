@@ -31,10 +31,12 @@ void bubbleSort(int *array, int length)
  }
 
 float bubbleSortTime(int *array, int length){
+    float t;
     clock_t inicio = clock();
     bubbleSort(array, length);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(array);
-    return (float)(clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
 }
 
 void testarBubble(int tam){

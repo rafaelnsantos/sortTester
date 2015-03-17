@@ -42,10 +42,12 @@ void radixSort(int *vetor, int tamanho) {
 }
 
 float radixSortTime(int *array, int length){
+    float t;
     clock_t inicio = clock();
     radixSort(array, length);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(array);
-    return (float)(clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
 }
 
 void testarRadix(int tam){

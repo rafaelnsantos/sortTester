@@ -57,10 +57,12 @@ void heapSort(int *a, int n){
 }
 
 float heapSortTime(int *array, int length){
+    float t;
     clock_t inicio = clock();
     heapSort(array, length);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(array);
-    return (float)(clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
 }
 
 void testarHeap(int tam){

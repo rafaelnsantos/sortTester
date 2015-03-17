@@ -50,10 +50,12 @@ extern "C" {
 }
  
  float shellSortTime (int *a, int n) {
+    float t;
     clock_t inicio = clock();
     shellSort(a, n);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(a);
-    return (double) (clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
  }
  
  void testarShell(int tam) {

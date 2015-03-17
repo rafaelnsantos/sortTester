@@ -74,11 +74,12 @@ void mergeSort( int *vetorDesorndeado, int posicaoInicio, int posicaoFim )
 }
 
 float mergeSortTime (int *a, int n) {
+    float t;
     clock_t inicio = clock();
     mergeSort(a, 0, n);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(a);
-    //imprimir(a, n, "asd.txt");
-    return (float) (clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
 }
 
 void testarMerge(int tam) {

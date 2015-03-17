@@ -31,10 +31,12 @@ void selectionSort(int *array, int length){
 }
 
 float selectionSortTime(int *array, int length){
+    float t;
     clock_t inicio = clock();
     selectionSort(array, length);
+    t = (float)(clock() - inicio) / CLOCKS_PER_SEC;
     free(array);
-    return (float) (clock() - inicio) / CLOCKS_PER_SEC;
+    return t;
 }
 
     void testarSelection(int tam) {
