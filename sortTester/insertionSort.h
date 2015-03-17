@@ -31,7 +31,14 @@ extern "C" {
         free(a);
         return (float) (clock() - inicio) / CLOCKS_PER_SEC;
     }
+    
     void testarInsertion(int tam) {
+//        int *vetor;
+//        vetor = (int *) malloc (tam*sizeof(int));
+//        vetor = invertidos(tam);
+//        imprimir(vetor, tam, "vetor invertido.txt");
+//        insertionSort(vetor, tam);
+//        imprimir(vetor, tam, "vetor ordenado com insertion.txt");
         printf("\n===INSERTION SORT===\n");
         printf("Ordenados: %f segundos\n", insertionSortTime(ordenados(tam), tam));
         printf("Invertidos: %f segundos\n", insertionSortTime(invertidos(tam), tam));
