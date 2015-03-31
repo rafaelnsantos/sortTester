@@ -42,6 +42,7 @@ int main(int argc, char** argv) {
         printf("7 - Heap Sort\n");
         printf("8 - Radix Sort\n");
         printf("9 - Busca Sequencial\n");
+        printf("10 - Busca Binaria\n");
         printf("\nEscolha: ");
         scanf("%d",&op);
         switch(op){
@@ -68,19 +69,19 @@ int main(int argc, char** argv) {
             case 6:
                 testarQuick(tam);
                 break;
-            
+
             case 7:
                 testarHeap(tam);
                 break;
-            
+
             case 8:
                 testarRadix(tam);
-                break;    
-                
+                break;
+
             case 9:
                 testarLinearSearch(tam);
                 break;
-                
+
             case 10:
                 testarBinarySearch(tam);
                 break;
