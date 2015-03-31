@@ -17,6 +17,8 @@
 #include "quickSort.h"
 #include "heapSort.h"
 #include "radixSort.h"
+#include "linearSearch.h"
+#include "binarySearch.h"
 
 /*
  *
@@ -39,6 +41,7 @@ int main(int argc, char** argv) {
         printf("6 - Quick Sort\n");
         printf("7 - Heap Sort\n");
         printf("8 - Radix Sort\n");
+        printf("9 - Busca Sequencial\n");
         printf("\nEscolha: ");
         scanf("%d",&op);
         switch(op){
@@ -73,6 +76,14 @@ int main(int argc, char** argv) {
             case 8:
                 testarRadix(tam);
                 break;    
+                
+            case 9:
+                testarLinearSearch(tam);
+                break;
+                
+            case 10:
+                testarBinarySearch(tam);
+                break;
 
             default:
                 printf("Opcao Invalida");

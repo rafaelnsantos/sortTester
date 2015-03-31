@@ -52,6 +52,28 @@ int * aleatorios(int tam){
     return vetor;
 }
 
+int * blocos(int tam){
+    int *vetor;
+    vetor = (int *) malloc (tam*sizeof(int));
+    int i;
+    srand(time(NULL));
+    for(i = 0; i < tam*0.25; i++){
+        vetor[i] = 10;
+    }
+    for(i = tam*0.25; i < tam*0.5; i++){
+        vetor[i] = 20;
+    }
+    for(i = tam*0.5; i < tam*0.75; i++){
+        vetor[i] = 30;
+    }
+    for(i = tam*0.75; i < tam; i++){
+        vetor[i] = 40;
+    }
+    //imprimir(vetor, tam, "aleatorios.txt");
+    //free(vetor);
+    return vetor;
+}
+
 void imprimir(int *vetor, int tam, char *nome){
     FILE * pFile;
     int i;

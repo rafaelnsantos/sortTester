@@ -4,15 +4,21 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>bubbleSort.h</itemPath>
-      <itemPath>heapSort.h</itemPath>
-      <itemPath>insertionSort.h</itemPath>
-      <itemPath>mergeSort.h</itemPath>
-      <itemPath>quickSort.h</itemPath>
-      <itemPath>radixSort.h</itemPath>
-      <itemPath>selectionSort.h</itemPath>
-      <itemPath>shellSort.h</itemPath>
-      <itemPath>vetores.h</itemPath>
+      <logicalFolder name="f1" displayName="Ordenação" projectFiles="true">
+        <itemPath>bubbleSort.h</itemPath>
+        <itemPath>heapSort.h</itemPath>
+        <itemPath>insertionSort.h</itemPath>
+        <itemPath>mergeSort.h</itemPath>
+        <itemPath>quickSort.h</itemPath>
+        <itemPath>radixSort.h</itemPath>
+        <itemPath>selectionSort.h</itemPath>
+        <itemPath>shellSort.h</itemPath>
+        <itemPath>vetores.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Pesquisa" projectFiles="true">
+        <itemPath>binarySearch.h</itemPath>
+        <itemPath>linearSearch.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -45,11 +51,15 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="binarySearch.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="bubbleSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="heapSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="insertionSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="linearSearch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -86,11 +96,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="binarySearch.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="bubbleSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="heapSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="insertionSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="linearSearch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
