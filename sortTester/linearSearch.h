@@ -1,12 +1,12 @@
 /* 
- * File:   Sequencial.h
+ * File:   linearSearch.h
  * Author: UTFPR
  *
  * Created on 31 de Março de 2015, 08:36
  */
 
-#ifndef SEQUENCIAL_H
-#define	SEQUENCIAL_H
+#ifndef LINEARSEARCH_H
+#define	LINEARSEARCH_H
 
 #include "vetores.h"
 
@@ -34,10 +34,12 @@ extern "C" {
 
     float linearSearchTime(int *array, int length, int num) {
         float t;
+        int *aux;
         clock_t inicio = clock();
-        linearSearch(array, length, num);
+        aux = linearSearch(array, length, num);
         t = (float) (clock() - inicio) / CLOCKS_PER_SEC;
         free(array);
+        free(aux);
         return t;
     }
 
@@ -57,5 +59,5 @@ extern "C" {
 }
 #endif
 
-#endif	/* SEQUENCIAL_H */
+#endif	/* LINEARSEARCH_H */
 
