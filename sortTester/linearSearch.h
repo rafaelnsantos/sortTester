@@ -69,9 +69,9 @@ extern "C" {
         int find, op;
         printf("Qual numero deseja buscar? ");
         scanf("%d", &find);
-        op = modoBusca();
+//        op = modoBusca();
         printf("\n===LINEAR SEARCH TAM %d===\n", tam);
-        switch (op) {
+        switch (modoBusca()) {
             case 1:
                 printf("Ordenados: %f segundos\n", linearSearchTimeUni(ordenados(tam), tam, find));
                 printf("Invertidos: %f segundos\n", linearSearchTimeUni(invertidos(tam), tam, find));
