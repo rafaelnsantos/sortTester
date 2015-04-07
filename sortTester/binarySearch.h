@@ -12,15 +12,15 @@
 extern "C" {
 #endif
 
-    int binarySearch(int A[], int key, int imin, int imax) {
+    void binarySearch(int *A, int key, int imin, int imax) {
         // test if array is empty
         if (imax < imin)
             // set is empty, so return value showing not found
-            return -1;
+            //return -1;
+        printf("Nao encontrado");
         else {
             // calculate midpoint to cut set in half
             int imid = (imin + imax)/2;
-
             // three-way comparison
             if (A[imid] > key)
                 // key is in lower subset
@@ -30,22 +30,23 @@ extern "C" {
                 return binarySearch(A, key, imid + 1, imax);
             else
                 // key has been found
-                return imid;
+                printf("Encontrado na posicao %d", imid);
         }
     }
     
-    float binarySearchTime(int *array, int length, int num) {
-        float t;
-        int achou;
+    double binarySearchTime(int *array, int length, int num) {
+        double t;
+        //int achou;
         clock_t inicio = clock();
-        achou = binarySearch(array, length,0, num-1);
-        t = (float) (clock() - inicio) / CLOCKS_PER_SEC;
+        binarySearch(array, num, 0, length);
+        //achou = binarySearch(array, num, 0, length);
+        t = (double) (clock() - inicio) / CLOCKS_PER_SEC;
         free(array);
-        if(achou!=-1){
-            printf("Pos: %d",achou);
-        } else {
-            printf("Nao encontrado.");
-        }
+//        if(achou!=-1){
+//            printf("Encontrado na posicao %d",achou);
+//        } else {
+//            printf("Nao encontrado.");
+//        }
         return t;
     }
 
@@ -54,10 +55,10 @@ extern "C" {
         printf("Qual numero deseja buscar? ");
         scanf("%d",&find);
         printf("\n===BINARY SEARCH TAM %d===\n", tam);
-        printf("Ordenados: %f segundos\n", binarySearchTime(ordenados(tam), tam, find));
-        printf("Invertidos: %f segundos\n", binarySearchTime(invertidos(tam), tam, find));
-        printf("Aleatorios: %f segundos\n", binarySearchTime(aleatorios(tam), tam, find));
-        printf("Blocos: %f segundos\n", binarySearchTime(blocos(tam), tam, find));
+        printf(" em %f segundos\n", binarySearchTime(ordenados(tam), tam, find));
+        //printf("Invertidos: %f segundos\n", binarySearchTime(invertidos(tam), tam, find));
+        //printf("Aleatorios: %f segundos\n", binarySearchTime(aleatorios(tam), tam, find));
+        //printf("Blocos: %f segundos\n", binarySearchTime(blocos(tam), tam, find));
     }
 
 #ifdef	__cplusplus
