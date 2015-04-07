@@ -38,7 +38,7 @@ extern "C" {
         double t;
         //int achou;
         clock_t inicio = clock();
-        binarySearch(array, num, 0, length);
+        binarySearch(array, num, 0, length-1);
         //achou = binarySearch(array, num, 0, length);
         t = (double) (clock() - inicio) / CLOCKS_PER_SEC;
         free(array);

@@ -19,6 +19,7 @@
         <itemPath>binarySearch.h</itemPath>
         <itemPath>linearSearch.h</itemPath>
       </logicalFolder>
+      <itemPath>trab.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -73,6 +74,8 @@
       </item>
       <item path="shellSort.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="trab.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
@@ -117,6 +120,8 @@
       <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="shellSort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="trab.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>
