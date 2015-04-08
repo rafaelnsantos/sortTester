@@ -28,8 +28,11 @@ void quickSort (int *a, int n) {
         t = a[i];
         a[i] = a[j];
         a[j] = t;
+        printf("a = %d\ni = %d\n",a);
     }
+    printf("a = %d\ni = %d\n",a);
     quickSort(a, i);
+    printf("a + i = %d\n",a+i);
     quickSort(a + i, n - i);
 }
 

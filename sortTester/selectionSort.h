@@ -14,21 +14,20 @@ extern "C" {
 
 #include "vetores.h"
 
-void selectionSort(int *array, int length){
-    int max, i, temp;
-    while (length > 0)
-    {
-        max = 0;
-        for (i = 1; i < length; i++)
-            if (array[i] > array[max])
-                max = i;
+    void selectionSort(int *array, int length) {
+        int max, i, temp;
+        while (length > 0) {
+            max = 0;
+            for (i = 1; i < length; i++)
+                if (array[i] > array[max])
+                    max = i;
 
-        temp = array[length-1];
-        array[length-1] = array[max];
-        array[max] = temp;
-        length--;
+            temp = array[length - 1];
+            array[length - 1] = array[max];
+            array[max] = temp;
+            length--;
+        }
     }
-}
 
 float selectionSortTime(int *array, int length){
     float t;

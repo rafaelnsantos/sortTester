@@ -19,7 +19,6 @@
         <itemPath>binarySearch.h</itemPath>
         <itemPath>linearSearch.h</itemPath>
       </logicalFolder>
-      <itemPath>trab.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -46,7 +45,7 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>MinGW|MinGW</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -73,8 +72,6 @@
       <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="shellSort.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="trab.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -120,8 +117,6 @@
       <item path="selectionSort.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="shellSort.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="trab.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="vetores.h" ex="false" tool="3" flavor2="0">
       </item>

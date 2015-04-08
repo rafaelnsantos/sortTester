@@ -6,6 +6,15 @@
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/selectionSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/bubbleSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/mergeSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/quickSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/insertionSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/shellSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/heapSort.h</file>
+            <file>file:/home/rnsantos/NetBeansProjects/sortTester/sortTester/radixSort.h</file>
+        </group>
     </open-files>
 </project-private>
